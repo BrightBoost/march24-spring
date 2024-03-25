@@ -2,17 +2,17 @@ package com.ilionx.demo.manytoone.service;
 
 import com.ilionx.demo.manytoone.models.Author;
 import com.ilionx.demo.manytoone.models.Book;
-import com.ilionx.demo.manytoone.repositories.AuthorRepository;
-import com.ilionx.demo.manytoone.repositories.BookRepository;
+import com.ilionx.demo.manytoone.repositories.AuthorOneRepository;
+import com.ilionx.demo.manytoone.repositories.BookOneRepository;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class BookService {
-    private BookRepository bookRepository;
-    private AuthorRepository authorRepository;
+public class BookOneService {
+    private BookOneRepository bookRepository;
+    private AuthorOneRepository authorRepository;
 
-    public BookService(BookRepository bookRepository, AuthorRepository authorRepository) {
+    public BookOneService(BookOneRepository bookRepository, AuthorOneRepository authorRepository) {
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
     }

@@ -1,8 +1,7 @@
 package com.ilionx.demo.manytoone.controllers;
 
 import com.ilionx.demo.manytoone.models.Author;
-import com.ilionx.demo.manytoone.repositories.AuthorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.ilionx.demo.manytoone.repositories.AuthorOneRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,11 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/authors")
-public class AuthorController {
+public class AuthorOneController {
 
-    private AuthorRepository authorRepository;
+    private AuthorOneRepository authorRepository;
 
-    public AuthorController(AuthorRepository authorRepository) {
+    public AuthorOneController(AuthorOneRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
 
