@@ -1,0 +1,11 @@
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+bin/kafka-topics.sh --create --topic realtime-data --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+to start producing messages:
+bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic realtime-data
+
+After entering messages, you should see them appear in the real time html file (http://localhost:8080/index.html)
